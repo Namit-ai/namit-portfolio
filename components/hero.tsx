@@ -114,10 +114,10 @@ export default function Hero() {
             </div>
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-              <img
-                src="/namit.jpg"
-                alt="Namit Bhandula"
-                className="w-full h-96 md:h-full object-cover"
+             <img
+                  src="/public/namit.jpg"
+                  alt="Namit Bhandula"
+                  className="w-full h-96 md:h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
             </div>
