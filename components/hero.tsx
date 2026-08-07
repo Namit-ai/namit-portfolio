@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
-import Image from "next/image";
 
 export default function Hero() {
   const scrollToPerformance = () => {
@@ -55,88 +54,4 @@ export default function Hero() {
               transition={{ delay: 0.4 }}
             >
               I connect exceptional technical talent with Fortune 500 enterprises. 
-              Specializing in US/Canadian staffing across 14+ technical domains with 
-              proven margin optimization and operations-first thinking.
-            </motion.p>
-
-            <motion.div
-              className="flex gap-4 flex-wrap"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.5 }}
-            >
-              <motion.button
-                onClick={scrollToPerformance}
-                className="px-8 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-cyan-500/50 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                View Performance
-              </motion.button>
-              <motion.a
-                href="#contact"
-                className="px-8 py-3 border border-slate-600 text-white font-semibold rounded-lg hover:bg-slate-800/50 transition-all"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Let's Talk
-              </motion.a>
-            </motion.div>
-
-            <motion.div
-              className="mt-12 grid grid-cols-3 gap-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.6 }}
-            >
-              <div>
-                <p className="text-2xl font-bold text-cyan-400">29+</p>
-                <p className="text-sm text-slate-400">Placements</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-cyan-400">$194/hr</p>
-                <p className="text-sm text-slate-400">Avg Margin</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold text-cyan-400">20+</p>
-                <p className="text-sm text-slate-400">Fortune 500s</p>
-              </div>
-            </motion.div>
-          </motion.div>
-
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ delay: 0.4, duration: 0.8 }}
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-1 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <div className="bg-slate-950 rounded-2xl" />
-            </div>
-
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-              <Image
-            src="/namit.jpg"
-            alt="Namit Bhandula"
-            width={400}
-            height={500}
-            className="w-full h-auto object-cover"
-            priority
-            unoptimized
-            />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
-            </div>
-          </motion.div>
-        </div>
-      </div>
-
-      <motion.div
-        className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
-        animate={{ y: [0, 10, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        <ArrowDown className="w-6 h-6 text-cyan-400" />
-      </motion.div>
-    </section>
-  );
-}
+              Specializing in US/Canadian staff
