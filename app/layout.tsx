@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Inter, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/theme-provider";
 import Navigation from "@/components/navigation";
 
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
@@ -29,14 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <body
         className={`${inter.variable} ${plusJakarta.variable} font-inter bg-slate-950 text-slate-100`}
       >
-        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
-          <Navigation />
-          {children}
-        </ThemeProvider>
+        <Navigation />
+        {children}
       </body>
     </html>
   );
