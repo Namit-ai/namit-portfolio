@@ -113,12 +113,12 @@ export default function Hero() {
               <div className="bg-slate-950 rounded-2xl" />
             </div>
 
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl bg-slate-900 h-96 md:h-96 flex items-center justify-center">
-              <div className="text-center">
-                <p className="text-9xl mb-4">👤</p>
-                <p className="text-slate-300 font-semibold">Namit Bhandula</p>
-                <p className="text-slate-400 text-sm mt-2">Senior Technical Recruiter</p>
-              </div>
+            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
+              <img
+                src="/namit.jpg"
+                alt="Namit Bhandula"
+                className="w-full h-96 md:h-full object-cover"
+              />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
             </div>
           </motion.div>
