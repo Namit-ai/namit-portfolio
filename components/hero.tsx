@@ -116,13 +116,14 @@ export default function Hero() {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
               <Image
-                src="/namit.jpg"
-                alt="Namit Bhandula"
-                width={400}
-                height={500}
-                className="w-full h-auto object-cover"
-                priority
-              />
+            src="/namit.jpg"
+            alt="Namit Bhandula"
+            width={400}
+            height={500}
+            className="w-full h-auto object-cover"
+            priority
+            unoptimized
+            />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
             </div>
           </motion.div>
