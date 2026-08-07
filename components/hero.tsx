@@ -103,24 +103,80 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
+          {/* ANIMATED GRADIENT BOX */}
           <motion.div
             className="relative"
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay: 0.4, duration: 0.8 }}
           >
-            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-2xl p-1 opacity-0 hover:opacity-100 transition-opacity duration-300">
-              <div className="bg-slate-950 rounded-2xl" />
-            </div>
+            {/* Outer Glow */}
+            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 rounded-3xl opacity-75 blur-2xl animate-pulse" />
 
-            <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
-             <img
-                  src="/namit.jpeg"
-                  alt="Namit Bhandula"
-                  className="w-full h-96 md:h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-950/40 to-transparent" />
-            </div>
+            {/* Main Gradient Box */}
+            <motion.div
+              className="relative rounded-3xl overflow-hidden border border-cyan-500/30 shadow-2xl h-96 md:h-full md:min-h-96 flex items-center justify-center"
+              animate={{
+                background: [
+                  "linear-gradient(135deg, rgba(34,211,238,0.1) 0%, rgba(59,130,246,0.1) 50%, rgba(139,92,246,0.1) 100%)",
+                  "linear-gradient(135deg, rgba(59,130,246,0.1) 0%, rgba(139,92,246,0.1) 50%, rgba(34,211,238,0.1) 100%)",
+                  "linear-gradient(135deg, rgba(139,92,246,0.1) 0%, rgba(34,211,238,0.1) 50%, rgba(59,130,246,0.1) 100%)",
+                  "linear-gradient(135deg, rgba(34,211,238,0.1) 0%, rgba(59,130,246,0.1) 50%, rgba(139,92,246,0.1) 100%)",
+                ],
+              }}
+              transition={{ duration: 8, repeat: Infinity, ease: "linear" }}
+            >
+              <div className="absolute inset-0 bg-gradient-to-b from-slate-950/0 via-slate-950/50 to-slate-950/80" />
+
+              {/* Content */}
+              <motion.div
+                className="relative z-10 text-center"
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.8, duration: 0.6 }}
+              >
+                <motion.div
+                  className="mb-6"
+                  animate={{ y: [0, -10, 0] }}
+                  transition={{ duration: 4, repeat: Infinity }}
+                >
+                  <p className="text-6xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                    NB
+                  </p>
+                </motion.div>
+
+                <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
+                  Namit Bhandula
+                </h3>
+
+                <p className="text-cyan-400 font-semibold text-sm mb-4">
+                  Senior Technical Recruiter
+                </p>
+
+                <p className="text-slate-300 text-sm max-w-xs">
+                  Global Talent Operations
+                </p>
+
+                {/* Animated Dots */}
+                <div className="flex justify-center gap-2 mt-6">
+                  <motion.div
+                    className="w-2 h-2 bg-cyan-400 rounded-full"
+                    animate={{ scale: [1, 1.5, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, delay: 0 }}
+                  />
+                  <motion.div
+                    className="w-2 h-2 bg-blue-400 rounded-full"
+                    animate={{ scale: [1, 1.5, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, delay: 0.3 }}
+                  />
+                  <motion.div
+                    className="w-2 h-2 bg-purple-400 rounded-full"
+                    animate={{ scale: [1, 1.5, 1] }}
+                    transition={{ duration: 1.5, repeat: Infinity, delay: 0.6 }}
+                  />
+                </div>
+              </motion.div>
+            </motion.div>
           </motion.div>
         </div>
       </div>
