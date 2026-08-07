@@ -115,7 +115,7 @@ export default function Hero() {
 
             <div className="relative rounded-2xl overflow-hidden border border-slate-800 shadow-2xl">
              <img
-                  src="/public/namit.jpg"
+                  src="/namit.jpeg"
                   alt="Namit Bhandula"
                   className="w-full h-96 md:h-full object-cover"
               />
