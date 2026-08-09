@@ -12,10 +12,9 @@ interface ClientTooltipProps {
 export default function ClientTooltip({ client }: ClientTooltipProps) {
   return (
     <motion.div
-      className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 pointer-events-auto"
-      initial={{ opacity: 0, scale: 0.9 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.9 }}
+      initial={{ opacity: 0, scale: 0.9, y: 10 }}
+      animate={{ opacity: 1, scale: 1, y: 0 }}
+      exit={{ opacity: 0, scale: 0.9, y: 10 }}
       transition={{ duration: 0.2 }}
     >
       {/* Tooltip Card */}
@@ -55,15 +54,6 @@ export default function ClientTooltip({ client }: ClientTooltipProps) {
           ))}
         </div>
       </div>
-
-      {/* Backdrop - Click to close */}
-      <motion.div
-        className="fixed inset-0 bg-black/50 z-40"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        onClick={() => window.location.hash = ""}
-      />
     </motion.div>
   );
 }
