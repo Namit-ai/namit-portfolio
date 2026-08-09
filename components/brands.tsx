@@ -302,7 +302,7 @@ export default function Brands() {
       </div>
 
       {/* Tooltip on Hover */}
-      {hoveredClient && <ClientTooltip client={hoveredClient} />}
+      {/* tooltip removed */}
     </section>
   );
 }
