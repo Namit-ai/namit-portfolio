@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss"
+import scrollbar from "tailwind-scrollbar"
 
 const config: Config = {
   content: [
@@ -11,9 +12,12 @@ const config: Config = {
         inter: ["var(--font-inter)"],
         "plus-jakarta": ["var(--font-plus-jakarta)"],
       },
+      scrollbar: {
+        thin: "thin",
+      },
     },
   },
-  plugins: [],
+  plugins: [scrollbar],
   darkMode: "class",
 }
 export default config
