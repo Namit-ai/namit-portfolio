@@ -32,7 +32,7 @@ export default function ClientTooltip({ client }: ClientTooltipProps) {
         </div>
 
         {/* Roles - SCROLLABLE */}
-        <div className="space-y-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-cyan-500/40 scrollbar-track-slate-700/20">
+        <div className="space-y-4 max-h-96 overflow-y-auto pr-2">
           {client.roles.map((role, idx) => (
             <motion.div
               key={idx}
