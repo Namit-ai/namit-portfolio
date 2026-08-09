@@ -209,7 +209,7 @@ export default function Brands() {
   return (
     <section
       id="brands"
-      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950 relative overflow-hidden"
+      className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-slate-900 to-slate-950 relative overflow-visible"
       ref={ref}
     >
       {/* Background Gradients */}
