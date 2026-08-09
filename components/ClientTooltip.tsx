@@ -1,5 +1,4 @@
 "use client";
-
 import { motion } from "framer-motion";
 
 interface ClientTooltipProps {
@@ -13,10 +12,10 @@ interface ClientTooltipProps {
 export default function ClientTooltip({ client }: ClientTooltipProps) {
   return (
     <motion.div
-      className="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none"
-      initial={{ opacity: 0, scale: 0.9, y: 20 }}
+      className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-3 z-50 pointer-events-auto"
+      initial={{ opacity: 0, scale: 0.9, y: 10 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.9, y: 20 }}
+      exit={{ opacity: 0, scale: 0.9, y: 10 }}
       transition={{ duration: 0.2 }}
     >
       {/* Tooltip Card */}
@@ -32,9 +31,9 @@ export default function ClientTooltip({ client }: ClientTooltipProps) {
           </p>
         </div>
 
-        {/* Roles */}
-        <div className="space-y-4 max-h-64 overflow-y-auto">
-          {client.roles.slice(0, 6).map((role, idx) => (
+        {/* Roles - SCROLLABLE */}
+        <div className="space-y-4 max-h-96 overflow-y-auto pr-2 scrollbar-thin scrollbar-thumb-cyan-500/40 scrollbar-track-slate-700/20">
+          {client.roles.map((role, idx) => (
             <motion.div
               key={idx}
               initial={{ opacity: 0, x: -10 }}
@@ -43,7 +42,7 @@ export default function ClientTooltip({ client }: ClientTooltipProps) {
             >
               <p className="text-sm font-semibold text-white">🔹 {role.title}</p>
               <div className="flex flex-wrap gap-1 mt-2">
-                {role.skills.slice(0, 5).map((skill, skillIdx) => (
+                {role.skills.map((skill, skillIdx) => (
                   <span
                     key={skillIdx}
                     className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full font-medium"
@@ -51,11 +50,6 @@ export default function ClientTooltip({ client }: ClientTooltipProps) {
                     {skill}
                   </span>
                 ))}
-                {role.skills.length > 5 && (
-                  <span className="px-2 py-1 bg-slate-700/50 text-slate-400 text-xs rounded-full font-medium">
-                    +{role.skills.length - 5} more
-                  </span>
-                )}
               </div>
             </motion.div>
           ))}
