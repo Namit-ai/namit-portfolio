@@ -6,60 +6,62 @@ interface ClientTooltipProps {
   client: {
     name: string;
     company: string;
-    roles: { title: string; skills: string[] }[];
+    roles: {
+      title: string;
+      skills: string[];
+    }[];
   };
 }
 
 export default function ClientTooltip({ client }: ClientTooltipProps) {
   return (
     <motion.div
-      className="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-50 pointer-events-none"
-      initial={{ opacity: 0, scale: 0.9, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 0.9, y: 20 }}
+      className="w-[430px] max-w-[90vw] rounded-2xl border border-cyan-500/30 bg-slate-900/95 backdrop-blur-xl shadow-2xl overflow-hidden pointer-events-auto"
+      initial={{ opacity: 0, y: 10, scale: 0.95 }}
+      animate={{ opacity: 1, y: 0, scale: 1 }}
+      exit={{ opacity: 0, y: 10, scale: 0.95 }}
       transition={{ duration: 0.2 }}
     >
-      {/* Tooltip Card */}
-      <div className="bg-gradient-to-br from-slate-800 to-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl p-6 w-96 backdrop-blur-xl">
-        {/* Header */}
-        <div className="mb-4 pb-4 border-b border-slate-700/50">
-          <p className="text-cyan-400 text-xs font-semibold uppercase tracking-wider">
-            {client.company}
-          </p>
-          <p className="text-white font-bold text-xl">{client.name}</p>
-          <p className="text-slate-400 text-xs mt-2">
-            {client.roles.length} recurring hiring focus areas
-          </p>
-        </div>
+      {/* Header */}
+      <div className="border-b border-slate-700 p-5">
+        <p className="text-cyan-400 text-sm font-semibold">
+          {client.company}
+        </p>
 
-        {/* Roles */}
-        <div className="space-y-4 max-h-64 overflow-y-auto">
-          {client.roles.slice(0, 6).map((role, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, x: -10 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ delay: idx * 0.05 }}
-            >
-              <p className="text-sm font-semibold text-white">🔹 {role.title}</p>
-              <div className="flex flex-wrap gap-1 mt-2">
-                {role.skills.slice(0, 5).map((skill, skillIdx) => (
-                  <span
-                    key={skillIdx}
-                    className="px-2 py-1 bg-cyan-500/20 text-cyan-300 text-xs rounded-full font-medium"
-                  >
-                    {skill}
-                  </span>
-                ))}
-                {role.skills.length > 5 && (
-                  <span className="px-2 py-1 bg-slate-700/50 text-slate-400 text-xs rounded-full font-medium">
-                    +{role.skills.length - 5} more
-                  </span>
-                )}
-              </div>
-            </motion.div>
-          ))}
-        </div>
+        <h3 className="text-white text-xl font-bold mt-1">
+          {client.name}
+        </h3>
+
+        <p className="text-slate-400 text-sm mt-1">
+          {client.roles.length} recurring hiring focus areas
+        </p>
+      </div>
+
+      {/* Scrollable Content */}
+      <div className="max-h-[420px] overflow-y-auto p-5 space-y-5">
+        {client.roles.map((role, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, x: -10 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ delay: idx * 0.04 }}
+          >
+            <h4 className="text-white font-semibold text-sm mb-2">
+              🔹 {role.title}
+            </h4>
+
+            <div className="flex flex-wrap gap-2">
+              {role.skills.map((skill, skillIdx) => (
+                <span
+                  key={skillIdx}
+                  className="px-2 py-1 rounded-full bg-cyan-500/20 text-cyan-300 text-xs"
+                >
+                  {skill}
+                </span>
+              ))}
+            </div>
+          </motion.div>
+        ))}
       </div>
     </motion.div>
   );
