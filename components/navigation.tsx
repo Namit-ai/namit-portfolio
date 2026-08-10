@@ -5,11 +5,12 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useTheme } from "next-themes";
+import Clients from "@/components/brands";
 
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Performance", href: "#performance" },
-  { label: "Brands", href: "#brands" },
+  { label: "Clients", href: "#clients" },
   { label: "Expertise", href: "#expertise" },
   { label: "Certifications", href: "#certifications" },
   { label: "Timeline", href: "#timeline" },
