@@ -225,7 +225,7 @@ export default function Brands() {
             Enterprise Partnerships
           </p>
           <h2 className="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-white to-cyan-200 bg-clip-text text-transparent">
-            Fortune 500 Brands Supported
+            Fortune 500 Clients Supported
           </h2>
           <p className="text-slate-400 text-lg max-w-3xl mx-auto">
             Hover over any brand to explore recurring hiring expertise and
