@@ -12,7 +12,7 @@ export default function Home() {
     <main className="bg-slate-950 text-slate-100">
       <Hero />
       <Performance />
-      <Brands />
+      <Clients />
       <Expertise />
       <Certifications />
       <Timeline />
