@@ -9,7 +9,7 @@ import { useTheme } from "next-themes";
 const navItems = [
   { label: "Home", href: "#home" },
   { label: "Performance", href: "#performance" },
-  { label: "Clients", href: "#brands" },
+  { label: "Brands", href: "#brands" },
   { label: "Expertise", href: "#expertise" },
   { label: "Certifications", href: "#certifications" },
   { label: "Timeline", href: "#timeline" },
