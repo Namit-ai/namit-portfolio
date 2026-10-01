@@ -53,24 +53,40 @@ export const clientsData = [
     company: "Akraya",
     roles: [
       { title: "Product Designer", skills: ["UI/UX Designing", "Buyer-seller ecosystem", "Ecommerce", "Android/iOS/Desktops"] },
-      { title: ".Net Developer", skills: [".Net", "C#", "Payment integration (Stripe or any other)"] },
-      { title: "Business Analyst", skills: ["API integration", "System integration", "Genesys Cloud", "Data Reporting", "Documentation"] },
-      { title: "Seller Capital Program Manager", skills: ["Consultative Selling", "Seller Outreach & Pipeline Development", "Drive Loan Originations", "Strategy & Prioritization"] },
-      { title: "Operations Analyst", skills: ["market research", "competitive intelligence", "customer journey analysis", "and business operations across eCommerce", "logistics", "retail", "and fintech"] },
-      { title: "Software Engineer", skills: ["Java", "Rest API", "NoSql", "JavaScript/TypeScript"] },
+      { title: "UX Writing & Content", skills: ["UX Writing", "Content Design", "Content Strategy", "Microcopy", "Voice & Tone", "Information Architecture", "Content Audits"] },
+      { title: "Visual & Interaction Design", skills: ["Visual Design", "UI Design", "Interaction Design", "Design Systems", "Typography", "Layout", "Color Theory", "Visual Hierarchy", "Prototyping", "Figma", "Adobe Creative Suite"] },
+      { title: "Motion Design", skills: ["Motion Design", "Animation", "Interaction Animation", "Micro-Interactions", "Transitions", "Rive"] },
     ],
   },
   {
     name: "Okta",
     company: "Akraya",
     roles: [
-      { title: "Software Engineer Social IAM", skills: ["Node.JS (Heavy Backend)", "Social Plugin SDK", "IAM", ""] },
+      { title: "Software Engineer Social IAM", skills: ["Node.JS (Heavy Backend)", "Social Plugin SDK", "IAM"] },
       { title: "Software Engineer", skills: ["Golang", "Authenticators", "Oauth"] },
       { title: "Product Marketing", skills: ["SaaS", "GTM", "Product Strategy", "Launch"] },
       { title: "Business Data Analyst", skills: ["Data Analysis", "Visualisation", "SQL", "Tableau", "Power BI", "Salesforce", "Excel"] },
       { title: "Global Campaign Manager, Okta Platform", skills: ["marketing campaigns", "launch", "B2B demand generation", "cybersecurity or Identity and Access Management (IAM) SaaS industry"] },
       { title: "Partner Marketing Manager - Public Sector", skills: ["B2G Marketing (Expert)", "Campaign Execution (Advanced)", "Partner Management (Advanced)", "Event Planning (Advanced)", "Data Analysis (Intermediate)"] },
       { title: "Software Engineer, Subscription Management", skills: ["Node.js (primary focus)", "payment systems (Stripe)", "subscription management"] },
+      { title: "UX Program Management", skills: ["UX Program Management", "Design Operations", "Program Management", "Cross-Functional Collaboration", "Design Planning", "Roadmaps", "Workflow Management", "Agile", "Scrum", "Stakeholder Management", "Project Coordination", "Risk Management"] },
+    ],
+  },
+  {
+    name: "Netflix",
+    company: "Akraya",
+    roles: [
+      { title: "Product Designer", skills: ["0 to 1", "TV/Mobile/Web", "IP/Entertainment Background"] },
+      { title: "AI Content Evaluator", skills: ["Localization", "AI Content", "LLM"] },
+      { title: "Marketing Manager", skills: ["Strategy + Operations", "Integrated Marketing campaigns", "Media channels", "Airtable"] },
+    ],
+  },
+  {
+    name: "Airbnb",
+    company: "Akraya",
+    roles: [
+      { title: "Data Scientist/Products Analytics", skills: ["Visualization", "Marketplace Background", "SQL"] },
+      { title: "Enablement Program Manager", skills: ["Enablement Tooling", "Strategy", "User adoption"] },
     ],
   },
   {
@@ -89,13 +105,14 @@ export const clientsData = [
     name: "Okta",
     company: "eTeam",
     roles: [
-      { title: "Software Engineer Social IAM", skills: ["Node.JS (Heavy Backend)", "Social Plugin SDK", "IAM", ""] },
+      { title: "Software Engineer Social IAM", skills: ["Node.JS (Heavy Backend)", "Social Plugin SDK", "IAM"] },
       { title: "Software Engineer", skills: ["Golang", "Authenticators", "Oauth"] },
       { title: "Product Marketing", skills: ["SaaS", "GTM", "Product Strategy", "Launch"] },
       { title: "Business Data Analyst", skills: ["Data Analysis", "Visualisation", "SQL", "Tableau", "Power BI", "Salesforce", "Excel"] },
       { title: "Global Campaign Manager, Okta Platform", skills: ["marketing campaigns", "launch", "B2B demand generation", "cybersecurity or Identity and Access Management (IAM) SaaS industry"] },
       { title: "Partner Marketing Manager - Public Sector", skills: ["B2G Marketing (Expert)", "Campaign Execution (Advanced)", "Partner Management (Advanced)", "Event Planning (Advanced)", "Data Analysis (Intermediate)"] },
       { title: "Software Engineer, Subscription Management", skills: ["Node.js (primary focus)", "payment systems (Stripe)", "subscription management"] },
+      { title: "UX Program Management", skills: ["UX Program Management", "Design Operations", "Program Management", "Cross-Functional Collaboration", "Design Planning", "Roadmaps", "Workflow Management", "Agile", "Scrum", "Stakeholder Management", "Project Coordination", "Risk Management"] },
     ],
   },
   {
@@ -156,21 +173,23 @@ export const clientsData = [
 ];
 
 const akrayaBrands = [
+  { name: "Netflix", logo: "🎬", category: "Entertainment" },
+  { name: "Airbnb", logo: "🏡", category: "Marketplace" },
   { name: "Adobe", logo: "🎨", category: "SaaS" },
   { name: "Visa", logo: "💳", category: "FinTech" },
-  { name: "Palo Alto Networks", logo: "🔒", category: "Cybersecurity" },
-  { name: "Anaplan", logo: "📊", category: "Analytics" },
   { name: "eBay", logo: "🛍️", category: "E-commerce" },
+  { name: "Palo Alto Networks", logo: "🔒", category: "Cybersecurity" },
   { name: "Okta", logo: "🔐", category: "Identity" },
+  { name: "Anaplan", logo: "📊", category: "Analytics" },
 ];
 
 const eTeamBrands = [
   { name: "Pinterest", logo: "📌", category: "Social" },
-  { name: "Okta", logo: "🔐", category: "Identity" },
-  { name: "Visa", logo: "💳", category: "FinTech" },
   { name: "Salesforce", logo: "☁️", category: "Enterprise" },
-  { name: "Logitech", logo: "🖱️", category: "Hardware" },
+  { name: "Visa", logo: "💳", category: "FinTech" },
+  { name: "Okta", logo: "🔐", category: "Identity" },
   { name: "Zillow", logo: "🏠", category: "Real Estate" },
+  { name: "Logitech", logo: "🖱️", category: "Hardware" },
   { name: "Thales", logo: "🛡️", category: "Defense" },
 ];
 
@@ -245,7 +264,7 @@ export default function Brands() {
             Akraya Inc. (Current)
           </motion.h3>
           <motion.div
-            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 overflow-visible"
+            className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 overflow-visible"
             variants={containerVariants}
             initial="hidden"
             animate={inView ? "visible" : "hidden"}
