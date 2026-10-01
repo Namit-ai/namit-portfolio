@@ -45,7 +45,7 @@ export default function BrandCard({
       </div>
 
       {/* Tooltip */}
-      {isHovered && client && (
+      {isHovered && client && client.roles.length > 0 && (
         <motion.div
           className="absolute bottom-full left-1/2 transform -translate-x-1/2 z-50 mb-2"
           initial={{ opacity: 0, y: 10 }}
