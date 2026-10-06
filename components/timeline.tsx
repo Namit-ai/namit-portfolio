@@ -28,7 +28,7 @@ export default function Timeline() {
       icon: "🚀",
     },
     {
-      date: "Jan 2024 - Apr 2025",
+      date: "Oct 2022 - Apr 2025",
       title: "Senior Technical Recruiter",
       company: "eTeam Global Services",
       description: "Full-lifecycle recruiting across 14+ technical verticals and Fortune 500 enterprises",
